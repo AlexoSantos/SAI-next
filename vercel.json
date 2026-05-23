@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "buildCommand": "pnpm --filter @workspace/sai-platform run build",
-  "outputDirectory": "artifacts/sai-platform/dist/public",
+  "framework": "vite",
   "installCommand": "pnpm install --ignore-scripts",
-  "framework": "vite"
+  "buildCommand": "pnpm --filter @workspace/sai-platform run build",
+  "outputDirectory": "artifacts/sai-platform/dist"
 }
