@@ -1,0 +1,978 @@
+PROMPTMASTER SUPREMO — SAI
+
+Sistema Nacional de Inteligência Climática da Imperatech
+
+GovTech + ClimateTech + IA Preditiva + SaaS Multi-Tenant + Segurança Militar
+
+PRONTO PARA PRODUÇÃO IMEDIATA
+
+
+---
+
+CONTEXTO ABSOLUTO
+
+Você é uma equipe completa composta por:
+
+arquiteto principal de software
+
+engenheiro de dados sênior
+
+especialista em IA
+
+especialista em segurança ofensiva e defensiva
+
+engenheiro DevOps
+
+especialista em geoprocessamento
+
+especialista em SaaS enterprise
+
+especialista em sistemas distribuídos
+
+especialista em observabilidade
+
+especialista em aplicações críticas nacionais
+
+especialista em dashboards geoespaciais
+
+especialista em IoT
+
+especialista em ClimateTech
+
+especialista em GovTech
+
+
+Sua missão é construir COMPLETAMENTE o sistema SAI (Sistema de Alerta Inteligente), uma plataforma nacional de inteligência climática da Imperatech.
+
+O sistema deve ser:
+
+extremamente moderno
+
+funcional
+
+visualmente impressionante
+
+escalável
+
+seguro
+
+modular
+
+pronto para produção
+
+pronto para deploy HOJE
+
+preparado para operação nacional real
+
+
+
+---
+
+OBJETIVO PRINCIPAL
+
+Construir uma plataforma SaaS multi-tenant de inteligência climática capaz de:
+
+✅ monitorar clima em tempo real
+✅ integrar APIs climáticas globais
+✅ integrar radares meteorológicos
+✅ integrar satélites NASA
+✅ integrar NOAA
+✅ integrar qualidade do ar
+✅ integrar incêndios em tempo real
+✅ integrar mapas da Defesa Civil
+✅ salvar dados históricos
+✅ criar previsões inteligentes
+✅ usar IA preditiva
+✅ detectar anomalias
+✅ calcular riscos climáticos
+✅ emitir alertas automáticos
+✅ operar em tempo real
+✅ funcionar inicialmente SEM estações físicas
+✅ deixar infraestrutura pronta para integração futura com estações IoT próprias
+
+
+---
+
+RESULTADO FINAL OBRIGATÓRIO
+
+Ao finalizar:
+
+o sistema deve compilar sem erros
+
+subir automaticamente na internet
+
+estar pronto para deploy na Vercel
+
+backend pronto para Railway/Render
+
+banco pronto no Supabase
+
+possuir login funcional
+
+possuir dashboards funcionais
+
+mostrar clima real em São João da Boa Vista/SP
+
+mostrar previsão real
+
+mostrar radar real
+
+mostrar mapas reais
+
+mostrar focos de incêndio reais
+
+mostrar qualidade do ar real
+
+mostrar análises IA
+
+mostrar dashboards executivos
+
+possuir estrutura pronta para integrar estações físicas futuras
+
+
+
+---
+
+LOCALIZAÇÃO INICIAL
+
+Configurar inicialmente:
+
+São João da Boa Vista — São Paulo — Brasil
+
+Ao iniciar o sistema: ✅ carregar automaticamente clima local
+✅ carregar previsão local
+✅ carregar mapas locais
+✅ carregar radar local
+✅ carregar qualidade do ar local
+✅ carregar incêndios próximos
+✅ carregar análise IA local
+
+
+---
+
+ARQUITETURA GERAL
+
+APIs Climáticas
++
+Satélites NASA
++
+NOAA
++
+Radar Meteorológico
++
+Qualidade do Ar
++
+Defesa Civil
+↓
+Data Ingestion Layer
+↓
+Normalization Engine
+↓
+Supabase PostgreSQL
+↓
+Prediction Engine
+↓
+Risk Engine
+↓
+ROMA Multi-Agent Architecture
+↓
+FastAPI Backend
+↓
+Realtime WebSocket
+↓
+Next.js Frontend
+↓
+Interactive Climate Dashboard
+↓
+Alert System
+
+
+---
+
+TECNOLOGIAS OBRIGATÓRIAS
+
+FRONTEND
+
+Usar obrigatoriamente:
+
+Next.js 15
+
+TypeScript
+
+TailwindCSS
+
+Shadcn/UI
+
+Framer Motion
+
+Zustand
+
+Recharts
+
+Leaflet
+
+React Leaflet
+
+Lucide Icons
+
+
+
+---
+
+BACKEND
+
+Usar:
+
+FastAPI
+
+Python 3.12
+
+AsyncIO
+
+SQLAlchemy
+
+Pydantic
+
+Celery
+
+Redis
+
+WebSocket
+
+
+
+---
+
+BANCO DE DADOS
+
+Usar:
+
+Supabase PostgreSQL
+
+
+Implementar: ✅ Row Level Security
+✅ isolamento multi-tenant
+✅ políticas seguras
+✅ auditoria
+✅ criptografia
+
+
+---
+
+IA E MACHINE LEARNING
+
+Usar:
+
+Pandas
+
+NumPy
+
+Scikit-learn
+
+Prophet
+
+TensorFlow
+
+XGBoost
+
+
+Preparar integração futura:
+
+ROMA
+
+LangGraph
+
+agentes autônomos
+
+
+
+---
+
+APIs GRATUITAS OBRIGATÓRIAS
+
+INTEGRAR TODAS
+
+CLIMA
+
+OpenWeather
+
+OpenWeather API
+
+Integrar:
+
+temperatura
+
+umidade
+
+pressão
+
+vento
+
+chuva
+
+previsão
+
+
+
+---
+
+Tomorrow.io
+
+Tomorrow.io API
+
+Integrar:
+
+previsão avançada
+
+clima severo
+
+nowcasting
+
+
+
+---
+
+WeatherAPI
+
+WeatherAPI
+
+
+---
+
+Open-Meteo
+
+Open-Meteo
+
+
+---
+
+Meteostat
+
+Meteostat API
+
+
+---
+
+NOAA
+
+NOAA Weather API
+
+
+---
+
+NASA E SATÉLITES
+
+NASA FIRMS
+
+NASA FIRMS
+
+Integrar:
+
+focos de incêndio
+
+hotspots térmicos
+
+
+
+---
+
+NASA POWER
+
+NASA POWER
+
+
+---
+
+NASA GIBS
+
+NASA GIBS
+
+
+---
+
+QUALIDADE DO AR
+
+OpenAQ
+
+OpenAQ API
+
+
+---
+
+WAQI
+
+WAQI API
+
+
+---
+
+RADAR METEOROLÓGICO
+
+RainViewer
+
+RainViewer API
+
+
+---
+
+MAPAS
+
+OpenStreetMap
+
+OpenStreetMap
+
+
+---
+
+DEFESA CIVIL
+
+PREPARAR INTEGRAÇÃO
+
+Criar placeholders:
+
+DEFESA_CIVIL_EMAIL=
+DEFESA_CIVIL_PASSWORD=
+DEFESA_CIVIL_API_KEY=
+DEFESA_CIVIL_MAP_URL=
+
+Preparar integração: ✅ WMS
+✅ GeoJSON
+✅ APIs privadas
+✅ autenticação Google/Gmail
+✅ mapas protegidos
+
+
+---
+
+DASHBOARD PRINCIPAL
+
+O dashboard deve mostrar:
+
+✅ temperatura
+✅ umidade
+✅ pressão barométrica
+✅ direção do vento
+✅ velocidade do vento
+✅ índice UV
+✅ chuva
+✅ chance de precipitação
+✅ qualidade do ar
+✅ partículas atmosféricas
+✅ focos de incêndio
+✅ radar meteorológico
+✅ mapas climáticos
+✅ previsão horária
+✅ previsão semanal
+✅ análise IA
+✅ risco climático
+✅ gráficos históricos
+✅ heatmaps
+✅ alertas ativos
+
+
+---
+
+DESIGN
+
+O visual deve parecer:
+
+NASA Mission Control
+
+Palantir Gotham
+
+centros de operações nacionais
+
+plataforma militar moderna
+
+
+Características: ✅ premium
+✅ cinematográfico
+✅ dark mode
+✅ ultra responsivo
+✅ institucional
+✅ tecnológico
+
+
+---
+
+MAPA INTERATIVO
+
+Criar mapa em tempo real contendo:
+
+✅ radares
+✅ chuva
+✅ focos NASA
+✅ temperatura
+✅ qualidade do ar
+✅ heatmaps
+✅ alertas
+✅ zonas críticas
+✅ integração Defesa Civil
+
+
+---
+
+IA PREDITIVA
+
+Criar IA capaz de:
+
+✅ detectar padrões
+✅ detectar anomalias
+✅ prever enchentes
+✅ prever incêndios
+✅ calcular risco climático
+✅ analisar histórico
+✅ cruzar múltiplas APIs
+✅ gerar score climático
+
+
+---
+
+NORMALIZATION ENGINE
+
+Criar camada responsável por:
+
+padronizar APIs
+
+limpar dados
+
+remover inconsistências
+
+unificar formatos
+
+
+
+---
+
+MULTI-TENANT SaaS
+
+Arquitetura obrigatória:
+
+IMPERATECH
+↓
+CLIENTES
+↓
+USUÁRIOS INTERNOS
+
+Cada cliente deve possuir: ✅ isolamento total
+✅ dashboards próprios
+✅ alertas próprios
+✅ usuários próprios
+✅ analytics próprios
+
+
+---
+
+IMPERATECH CONTROL CENTER
+
+PAINEL DO CEO
+
+Criar painel executivo premium.
+
+Inspirado em:
+
+AWS Console
+
+Datadog
+
+Grafana Enterprise
+
+Palantir
+
+
+
+---
+
+O PAINEL DO CEO DEVE MOSTRAR
+
+✅ clientes ativos
+✅ clientes offline
+✅ faturamento
+✅ uso do sistema
+✅ APIs online/offline
+✅ métricas SaaS
+✅ uso IA
+✅ analytics nacionais
+✅ uptime
+✅ logs
+✅ mapa operacional
+✅ status do sistema
+
+
+---
+
+SISTEMA FINANCEIRO SaaS
+
+Preparar integração:
+
+Stripe
+
+Mercado Pago
+
+Asaas
+
+PagSeguro
+
+
+Mostrar: ✅ assinaturas
+✅ vencimentos
+✅ inadimplência
+✅ faturamento
+
+
+---
+
+SEGURANÇA SUPREMA
+
+ENTERPRISE + MILITARY GRADE
+
+Implementar arquitetura Zero Trust.
+
+Todo acesso deve:
+
+ser autenticado
+
+validado
+
+autorizado
+
+auditado
+
+
+
+---
+
+CRIPTOGRAFIA
+
+Implementar obrigatoriamente:
+
+✅ AES-256
+✅ TLS 1.3
+✅ HTTPS obrigatório
+✅ criptografia de sessões
+✅ criptografia de credenciais
+✅ criptografia de tokens
+✅ criptografia de dados sensíveis
+
+
+---
+
+AUTENTICAÇÃO
+
+Implementar:
+
+✅ JWT seguro
+✅ Refresh Tokens rotativos
+✅ expiração automática
+✅ logout global
+✅ revogação de sessão
+✅ MFA preparado
+✅ proteção session hijacking
+
+
+---
+
+SEGURANÇA WEB
+
+Implementar:
+
+✅ proteção XSS
+✅ proteção CSRF
+✅ proteção SQL Injection
+✅ proteção brute force
+✅ Content Security Policy
+✅ secure cookies
+✅ SameSite cookies
+✅ rate limit
+✅ anti scraping
+✅ proteção DDoS preparada
+
+
+---
+
+SEGURANÇA BACKEND
+
+Implementar:
+
+✅ ORM seguro
+✅ queries parametrizadas
+✅ validação Pydantic
+✅ sanitização total
+✅ proteção SSRF
+
+
+---
+
+SEGURANÇA MULTI-TENANT
+
+Garantir: ❌ nenhum cliente acessa outro cliente
+
+Implementar: ✅ Row Level Security
+✅ segregação lógica
+✅ escopo obrigatório
+
+
+---
+
+MONITORAMENTO DE SEGURANÇA
+
+Criar:
+
+Security Operations Center (SOC)
+
+Monitorar: ✅ tentativas de invasão
+✅ brute force
+✅ atividades suspeitas
+✅ IPs suspeitos
+✅ ataques automatizados
+
+
+---
+
+AUDITORIA
+
+Registrar: ✅ login
+✅ logout
+✅ IP
+✅ dispositivo
+✅ alterações
+✅ acessos críticos
+✅ pagamentos
+✅ permissões
+
+
+---
+
+OBSERVABILIDADE
+
+Preparar integração:
+
+Grafana
+
+Prometheus
+
+Loki
+
+Sentry
+
+
+
+---
+
+BACKUPS
+
+Implementar: ✅ backups automáticos
+✅ snapshots
+✅ recuperação de desastre
+
+
+---
+
+WEBSOCKET
+
+Atualizar em tempo real: ✅ mapas
+✅ gráficos
+✅ radar
+✅ clima
+✅ alertas
+✅ analytics
+
+
+---
+
+ALERTAS
+
+Preparar:
+
+WhatsApp
+
+Telegram
+
+SMS
+
+Email
+
+Push Notifications
+
+
+
+---
+
+PREPARAÇÃO IoT FUTURA
+
+MUITO IMPORTANTE
+
+O sistema inicialmente funcionará SEM estações físicas.
+
+PORÉM:
+
+Criar arquitetura COMPLETA preparada para futura integração de:
+
+✅ ESP32
+✅ MQTT
+✅ LoRa
+✅ sensores climáticos
+✅ sensores ultrassônicos
+✅ sensores de fumaça
+✅ câmeras
+✅ estações hidrológicas
+✅ estações meteorológicas próprias
+
+
+---
+
+CRIAR ENDPOINTS PREPARADOS
+
+Criar rotas:
+
+/api/iot
+/api/stations
+/api/sensors
+/api/mqtt
+/api/cameras
+
+
+---
+
+PREPARAR MQTT
+
+Criar suporte para tópicos:
+
+sai/station/{id}/climate
+sai/station/{id}/river
+sai/station/{id}/smoke
+sai/station/{id}/camera
+sai/station/{id}/alerts
+
+
+---
+
+ESTRUTURA DE BANCO DE DADOS
+
+Criar tabelas:
+
+users
+organizations
+subscriptions
+plans
+stations
+iot_devices
+sensors
+climate_data
+forecast_data
+weather_history
+air_quality
+fire_events
+nasa_events
+risk_analysis
+alerts
+analytics
+map_layers
+audit_logs
+api_usage
+system_metrics
+payments
+invoices
+roles
+permissions
+tenants
+user_sessions
+
+
+---
+
+FRONTEND PAGES
+
+Criar:
+
+/
+/login
+/dashboard
+/map
+/analytics
+/alerts
+/settings
+/admin
+/control-center
+/stations
+
+
+---
+
+BACKEND ROUTES
+
+Criar:
+
+/api/weather
+/api/forecast
+/api/fire
+/api/radar
+/api/nasa
+/api/air-quality
+/api/risk
+/api/analytics
+/api/maps
+/api/iot
+/api/stations
+/api/auth
+/api/admin
+/api/billing
+
+
+---
+
+LOGIN MASTER CEO
+
+Criar automaticamente:
+
+Email: ceo@imperatech.ai
+
+Senha: IMPERATECH_MASTER_2026
+
+Acesso: ✅ SUPER_ADMIN GLOBAL
+
+
+---
+
+LOGIN ADMIN SAI
+
+Criar automaticamente:
+
+Email: admin@sai.gov
+
+Senha: SAI_MASTER_2026
+
+
+---
+
+RESPONSIVIDADE
+
+Funcionar perfeitamente: ✅ desktop
+✅ tablet
+✅ celular
+✅ TVs
+✅ painéis urbanos
+
+
+---
+
+DEPLOY
+
+O sistema DEVE sair:
+
+✅ compilando sem erros
+✅ pronto para Vercel
+✅ pronto para Railway
+✅ pronto para Supabase
+✅ pronto para Docker
+✅ com README completo
+✅ com setup automático
+✅ com .env.example
+✅ com documentação técnica completa
+
+
+---
+
+RESULTADO FINAL ABSOLUTO
+
+Entregar uma plataforma nacional de inteligência climática completamente funcional, moderna, premium, extremamente segura, preparada para IA preditiva, preparada para SaaS empresarial da Imperatech, preparada para integração futura com estações meteorológicas próprias e pronta para operação real em monitoramento climático, previsão meteorológica, incêndios, enchentes, análise de riscos e gestão operacional inteligente em escala nacional.

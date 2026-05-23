@@ -1,0 +1,740 @@
+openapi: 3.1.0
+info:
+  title: Api
+  version: 0.1.0
+  description: SAI - Sistema de Alerta Inteligente API
+servers:
+  - url: /api
+    description: Base API path
+tags:
+  - name: health
+    description: Health operations
+  - name: auth
+    description: Authentication operations
+  - name: weather
+    description: Weather and climate data
+  - name: forecast
+    description: Forecast data
+  - name: fire
+    description: Fire and hotspot data
+  - name: air-quality
+    description: Air quality data
+  - name: alerts
+    description: Alert management
+  - name: analytics
+    description: Analytics and statistics
+  - name: stations
+    description: IoT stations management
+  - name: admin
+    description: Admin operations
+
+paths:
+  /healthz:
+    get:
+      operationId: healthCheck
+      tags: [health]
+      summary: Health check
+      description: Returns server health status
+      responses:
+        "200":
+          description: Healthy
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthStatus"
+
+  /auth/login:
+    post:
+      operationId: login
+      tags: [auth]
+      summary: Login user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LoginInput"
+      responses:
+        "200":
+          description: Login successful
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AuthResponse"
+        "401":
+          description: Invalid credentials
+
+  /auth/logout:
+    post:
+      operationId: logout
+      tags: [auth]
+      summary: Logout user
+      responses:
+        "200":
+          description: Logged out
+
+  /auth/me:
+    get:
+      operationId: getMe
+      tags: [auth]
+      summary: Get current user
+      responses:
+        "200":
+          description: Current user info
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+        "401":
+          description: Not authenticated
+
+  /weather/current:
+    get:
+      operationId: getCurrentWeather
+      tags: [weather]
+      summary: Get current weather data
+      parameters:
+        - name: lat
+          in: query
+          schema:
+            type: number
+          description: Latitude
+        - name: lon
+          in: query
+          schema:
+            type: number
+          description: Longitude
+      responses:
+        "200":
+          description: Current weather data
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CurrentWeather"
+
+  /weather/history:
+    get:
+      operationId: getWeatherHistory
+      tags: [weather]
+      summary: Get weather history
+      responses:
+        "200":
+          description: Historical weather data
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/WeatherRecord"
+
+  /forecast/hourly:
+    get:
+      operationId: getHourlyForecast
+      tags: [forecast]
+      summary: Get hourly forecast
+      parameters:
+        - name: lat
+          in: query
+          schema:
+            type: number
+        - name: lon
+          in: query
+          schema:
+            type: number
+      responses:
+        "200":
+          description: Hourly forecast data
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/HourlyForecast"
+
+  /forecast/daily:
+    get:
+      operationId: getDailyForecast
+      tags: [forecast]
+      summary: Get 7-day daily forecast
+      parameters:
+        - name: lat
+          in: query
+          schema:
+            type: number
+        - name: lon
+          in: query
+          schema:
+            type: number
+      responses:
+        "200":
+          description: Daily forecast data
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/DailyForecast"
+
+  /fire/hotspots:
+    get:
+      operationId: getFireHotspots
+      tags: [fire]
+      summary: Get active fire hotspots
+      parameters:
+        - name: lat
+          in: query
+          schema:
+            type: number
+        - name: lon
+          in: query
+          schema:
+            type: number
+        - name: radius
+          in: query
+          schema:
+            type: number
+      responses:
+        "200":
+          description: Fire hotspot data
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/FireHotspot"
+
+  /air-quality/current:
+    get:
+      operationId: getAirQuality
+      tags: [air-quality]
+      summary: Get current air quality
+      parameters:
+        - name: lat
+          in: query
+          schema:
+            type: number
+        - name: lon
+          in: query
+          schema:
+            type: number
+      responses:
+        "200":
+          description: Air quality data
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AirQuality"
+
+  /alerts:
+    get:
+      operationId: getAlerts
+      tags: [alerts]
+      summary: Get all active alerts
+      responses:
+        "200":
+          description: List of alerts
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Alert"
+
+  /alerts/{id}:
+    get:
+      operationId: getAlert
+      tags: [alerts]
+      summary: Get alert by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Alert details
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Alert"
+
+  /analytics/overview:
+    get:
+      operationId: getAnalyticsOverview
+      tags: [analytics]
+      summary: Get analytics overview/dashboard summary
+      responses:
+        "200":
+          description: Analytics overview
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AnalyticsOverview"
+
+  /analytics/risk:
+    get:
+      operationId: getRiskAnalysis
+      tags: [analytics]
+      summary: Get climate risk analysis
+      responses:
+        "200":
+          description: Risk analysis data
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RiskAnalysis"
+
+  /stations:
+    get:
+      operationId: getStations
+      tags: [stations]
+      summary: Get all IoT stations
+      responses:
+        "200":
+          description: List of stations
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Station"
+
+  /admin/system-status:
+    get:
+      operationId: getSystemStatus
+      tags: [admin]
+      summary: Get system status for admin panel
+      responses:
+        "200":
+          description: System status
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SystemStatus"
+
+  /admin/api-status:
+    get:
+      operationId: getApiStatus
+      tags: [admin]
+      summary: Get external API connectivity status
+      responses:
+        "200":
+          description: API status list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/ApiStatus"
+
+components:
+  schemas:
+    HealthStatus:
+      type: object
+      properties:
+        status:
+          type: string
+      required:
+        - status
+
+    LoginInput:
+      type: object
+      required: [email, password]
+      properties:
+        email:
+          type: string
+          format: email
+        password:
+          type: string
+
+    AuthResponse:
+      type: object
+      required: [user, token]
+      properties:
+        user:
+          $ref: "#/components/schemas/User"
+        token:
+          type: string
+
+    User:
+      type: object
+      required: [id, email, name, role]
+      properties:
+        id:
+          type: integer
+        email:
+          type: string
+        name:
+          type: string
+        role:
+          type: string
+          enum: [super_admin, admin, operator, viewer]
+        organization:
+          type: ["string", "null"]
+        avatar:
+          type: ["string", "null"]
+
+    CurrentWeather:
+      type: object
+      required: [temperature, humidity, pressure, windSpeed, windDirection, uvIndex, precipitation, condition, feelsLike, visibility, dewPoint, location, updatedAt]
+      properties:
+        temperature:
+          type: number
+        feelsLike:
+          type: number
+        humidity:
+          type: number
+        pressure:
+          type: number
+        windSpeed:
+          type: number
+        windDirection:
+          type: number
+        windGust:
+          type: ["number", "null"]
+        uvIndex:
+          type: number
+        precipitation:
+          type: number
+        precipitationProbability:
+          type: number
+        condition:
+          type: string
+        conditionCode:
+          type: integer
+        visibility:
+          type: number
+        dewPoint:
+          type: number
+        cloudCover:
+          type: number
+        location:
+          type: string
+        lat:
+          type: number
+        lon:
+          type: number
+        updatedAt:
+          type: string
+          format: date-time
+
+    WeatherRecord:
+      type: object
+      required: [timestamp, temperature, humidity, precipitation]
+      properties:
+        timestamp:
+          type: string
+          format: date-time
+        temperature:
+          type: number
+        humidity:
+          type: number
+        precipitation:
+          type: number
+        windSpeed:
+          type: ["number", "null"]
+        pressure:
+          type: ["number", "null"]
+
+    HourlyForecast:
+      type: object
+      required: [timestamp, temperature, humidity, precipitation, precipitationProbability, windSpeed, condition, conditionCode]
+      properties:
+        timestamp:
+          type: string
+          format: date-time
+        temperature:
+          type: number
+        feelsLike:
+          type: number
+        humidity:
+          type: number
+        precipitation:
+          type: number
+        precipitationProbability:
+          type: number
+        windSpeed:
+          type: number
+        windDirection:
+          type: number
+        condition:
+          type: string
+        conditionCode:
+          type: integer
+        cloudCover:
+          type: number
+        uvIndex:
+          type: number
+
+    DailyForecast:
+      type: object
+      required: [date, tempMax, tempMin, humidity, precipitation, precipitationProbability, windSpeed, condition, conditionCode, sunrise, sunset]
+      properties:
+        date:
+          type: string
+          format: date
+        tempMax:
+          type: number
+        tempMin:
+          type: number
+        humidity:
+          type: number
+        precipitation:
+          type: number
+        precipitationProbability:
+          type: number
+        windSpeed:
+          type: number
+        windDirection:
+          type: number
+        condition:
+          type: string
+        conditionCode:
+          type: integer
+        uvIndex:
+          type: number
+        sunrise:
+          type: string
+        sunset:
+          type: string
+
+    FireHotspot:
+      type: object
+      required: [id, lat, lon, brightness, confidence, acqDate, acqTime, instrument, daynight]
+      properties:
+        id:
+          type: string
+        lat:
+          type: number
+        lon:
+          type: number
+        brightness:
+          type: number
+        confidence:
+          type: string
+        acqDate:
+          type: string
+        acqTime:
+          type: string
+        instrument:
+          type: string
+        daynight:
+          type: string
+        frp:
+          type: ["number", "null"]
+        satellite:
+          type: ["string", "null"]
+
+    AirQuality:
+      type: object
+      required: [aqi, category, pm25, pm10, no2, o3, co, so2, location, updatedAt]
+      properties:
+        aqi:
+          type: integer
+        category:
+          type: string
+        pm25:
+          type: number
+        pm10:
+          type: number
+        no2:
+          type: number
+        o3:
+          type: number
+        co:
+          type: number
+        so2:
+          type: number
+        nh3:
+          type: ["number", "null"]
+        location:
+          type: string
+        lat:
+          type: number
+        lon:
+          type: number
+        updatedAt:
+          type: string
+          format: date-time
+
+    Alert:
+      type: object
+      required: [id, type, severity, title, description, location, isActive, createdAt]
+      properties:
+        id:
+          type: integer
+        type:
+          type: string
+          enum: [flood, fire, storm, extreme_heat, drought, air_quality, wind, custom]
+        severity:
+          type: string
+          enum: [low, moderate, high, critical, extreme]
+        title:
+          type: string
+        description:
+          type: string
+        location:
+          type: string
+        lat:
+          type: ["number", "null"]
+        lon:
+          type: ["number", "null"]
+        radius:
+          type: ["number", "null"]
+        isActive:
+          type: boolean
+        expiresAt:
+          type: ["string", "null"]
+          format: date-time
+        createdAt:
+          type: string
+          format: date-time
+
+    AnalyticsOverview:
+      type: object
+      required: [totalAlerts, activeAlerts, criticalAlerts, activeStations, activeHotspots, avgAqi, avgTemperature, systemUptime, apisCalls24h, alertsTrend, hotspotsLast7Days, temperatureLast7Days]
+      properties:
+        totalAlerts:
+          type: integer
+        activeAlerts:
+          type: integer
+        criticalAlerts:
+          type: integer
+        activeStations:
+          type: integer
+        activeHotspots:
+          type: integer
+        avgAqi:
+          type: number
+        avgTemperature:
+          type: number
+        systemUptime:
+          type: number
+        apisCalls24h:
+          type: integer
+        alertsTrend:
+          type: array
+          items:
+            $ref: "#/components/schemas/TrendPoint"
+        hotspotsLast7Days:
+          type: array
+          items:
+            $ref: "#/components/schemas/TrendPoint"
+        temperatureLast7Days:
+          type: array
+          items:
+            $ref: "#/components/schemas/TrendPoint"
+
+    TrendPoint:
+      type: object
+      required: [label, value]
+      properties:
+        label:
+          type: string
+        value:
+          type: number
+
+    RiskAnalysis:
+      type: object
+      required: [overallRisk, floodRisk, fireRisk, stormRisk, heatRisk, droughtRisk, airQualityRisk, score, lastUpdated]
+      properties:
+        overallRisk:
+          type: string
+          enum: [low, moderate, high, critical, extreme]
+        floodRisk:
+          type: string
+          enum: [low, moderate, high, critical, extreme]
+        fireRisk:
+          type: string
+          enum: [low, moderate, high, critical, extreme]
+        stormRisk:
+          type: string
+          enum: [low, moderate, high, critical, extreme]
+        heatRisk:
+          type: string
+          enum: [low, moderate, high, critical, extreme]
+        droughtRisk:
+          type: string
+          enum: [low, moderate, high, critical, extreme]
+        airQualityRisk:
+          type: string
+          enum: [low, moderate, high, critical, extreme]
+        score:
+          type: number
+        aiAnalysis:
+          type: string
+        lastUpdated:
+          type: string
+          format: date-time
+
+    Station:
+      type: object
+      required: [id, name, lat, lon, status, type]
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        lat:
+          type: number
+        lon:
+          type: number
+        status:
+          type: string
+          enum: [online, offline, maintenance, planned]
+        type:
+          type: string
+          enum: [meteorological, hydrological, air_quality, fire_detection, multi]
+        lastReading:
+          type: ["string", "null"]
+          format: date-time
+        batteryLevel:
+          type: ["number", "null"]
+        signalStrength:
+          type: ["number", "null"]
+
+    SystemStatus:
+      type: object
+      required: [status, uptime, version, activeUsers, totalRequests24h, errorRate, dbStatus, cacheStatus]
+      properties:
+        status:
+          type: string
+          enum: [operational, degraded, outage]
+        uptime:
+          type: number
+        version:
+          type: string
+        activeUsers:
+          type: integer
+        totalRequests24h:
+          type: integer
+        errorRate:
+          type: number
+        dbStatus:
+          type: string
+        cacheStatus:
+          type: string
+        memory:
+          type: number
+        cpu:
+          type: number
+
+    ApiStatus:
+      type: object
+      required: [name, status, responseTime, lastCheck]
+      properties:
+        name:
+          type: string
+        url:
+          type: string
+        status:
+          type: string
+          enum: [online, offline, degraded]
+        responseTime:
+          type: ["number", "null"]
+        lastCheck:
+          type: string
+          format: date-time
+        successRate:
+          type: number

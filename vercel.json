@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "buildCommand": "pnpm --filter @workspace/sai-platform run build",
+  "outputDirectory": "artifacts/sai-platform/dist/public",
+  "installCommand": "pnpm install",
+  "framework": "vite",
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://SUA-API-RENDER-OU-RAILWAY.com/api/$1"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "SAI — Sistema de Alerta Inteligente"
+version = "1.0.0"
+id = "artifacts/sai-platform"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20228
+
+[services.development]
+run = "pnpm --filter @workspace/sai-platform run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/sai-platform", "run", "build" ]
+publicDir = "artifacts/sai-platform/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20228"
+BASE_PATH = "/"
